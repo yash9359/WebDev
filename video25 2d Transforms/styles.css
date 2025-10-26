@@ -1,0 +1,67 @@
+.box{
+    width: 400px;
+    height: 400px;
+    background-color: beige;
+    border: 2px solid black;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    /* margin: auto; */
+
+    /* abb transform chalu pr transition lagana jaruri nahi to smooth ness nahi aygi jhatke se changement hoga jo bekar lagta hai*/
+    transition: all 4s linear 0s ;
+    
+
+}
+.container{
+    width: 100vw;
+    height:100vh ;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.box:hover{
+    /* bina transtion propety ke jhatke se hoga smoothness nahi aygi */
+    /* rotate ka kaam transform ka, smoothness ka kaam transition ka */
+    /* transform: rotate(360deg); */
+
+    /* scaling - height width xby hoti  hm chota bhi kar sakte bada bhi*/
+    /* height width 2 guni ho jati  */
+    /* transform: scale(2); */
+
+    /* chota ho jayega */
+    /* transform: scale(0.5); */
+    /* anti clock wise */
+    /* transform: rotate(-360deg); */
+
+    /* tilt karne ke liye skew ka use hota */
+    /* transform: skew(45deg); */
+
+    /* most used property = trasnlate ye movement karata lest mai right mai x and y dirn mai   */
+    /* +x dirn mai */
+    /* transform: translate(500px); */
+
+    /* -x dirn mai and +y=niche css mai ulta hota y axis */
+    /* transform: translate(0px,500px); */
+
+    /* -y axis matlb upper */
+    transform: translate(500px,-500px);
+
+    /* only x axis pe lagega */
+    /* transform: translatex(400px); */
+
+
+
+
+
+
+    background-color: rgb(92, 230, 13);
+}
+
+p{
+    font-size: 36px;
+    
+}

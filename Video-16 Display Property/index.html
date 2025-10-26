@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width= , initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+            /* imp hai box sizing  */
+            box-sizing: border-box;
+        }
+        .box{
+            width: 300px;
+            height: 300px;
+            border: 1px solid black;
+            padding: 100px;
+
+            /* div block element hota abb isse inline element banate hai with the help of display property */
+            /* display: inline; */
+           
+        }
+
+        span{
+            border: 2px solid rgb(234, 0, 0);
+            /* inline element custom width and height apply nahi kar sakta */
+            width: 300px;
+            height: 200px;
+            /* inline element mai margin nahi lagta hai lagta hai to kewal horizontal */
+
+            margin: 5px;
+
+            /* inline element mai padding lggtai hai */
+            padding: 5px;
+            
+
+            /* span ek inline element hai to isse block mai expilicitly badal sakte */
+            /* bn gya block ab apni height width sb lega jo dalenege */
+
+            /* display: block; */
+
+
+            /* agar hme dono property use karni ho inline and block wali too  matalb behave inline ki tarah kare and block ki property use kar sake matalb custom width de sake height and all*/
+            display: inline-block;
+
+
+
+        }
+
+        /* div{
+
+            /* div block element hota hai */
+
+            border: 1px solid rgb(248, 17, 17);
+            width: 300px;
+            height: 300px;
+            margin: 25px;
+            padding: 10px;
+
+
+        } */
+    </style>
+</head>
+<body>
+
+   <!-- <div>
+    Welcome to CodeHelp
+   </div>
+   <div>
+    Welcome to CodeHelp2.0
+   </div> -->
+
+   <!-- <div class="box">
+        Welcome to CodeHelp
+   </div> -->
+   <span>
+
+        <!-- ye inline block ho taa hai jitna contetent hota utna hi jagha leta  same line mai aata pura block nahi leta block  element ki tarah -->
+
+        This is Yash gupta
+   </span>
+   <span>
+    This is love baabar 2.0
+   </span>
+ 
+ 
+</body>
+</html>
