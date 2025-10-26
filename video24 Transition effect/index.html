@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transition</title>
+    <style>
+        .box{
+
+            /* tarnasition 2 states ke bich lagta to pehli ye rahi dusri banate hai bahar */
+            /* first state */
+
+            height: 400px;
+            width: 400px;
+            background-color: beige;
+            border: 2px solid black ;
+
+            /* tranistions */
+
+            /* jab width pe property  lagi to width dhere dhere badh rahi color nahi agar hm property all kar de to sb pe changement dhere dhre ata matalb color bhii dhree dhree badlega smooth movement hoga*/
+
+            /* transition-property: all;
+            transition-duration: 4s;
+            transition-delay: 0s;
+            transition-timing-function: ease; */
+
+            /*  itne transition se kuch nahi hoga measns chalgea nahi koi action chaiye tranction dekhne ke liye hme hover ya pseudo class state lagani padegi*/
+
+            /* shorthand notation */
+
+            /* property name | duration */
+            /* transition: all 4s; */
+
+            /* property name | duration | easing function */
+            /* transition: all 4s ease-in-out; */
+
+            /* property name | duration | easing function | delay */
+            /* transition: all 4s ease-in-out 1s;      */
+
+            /* property name | duration | behavior */
+            /* transition: all 4s allow-discrete; */
+
+            /* multiple properties  by using , */
+            transition: width 2s , height 25s;
+
+
+
+
+
+        }
+
+        /* pseudo class */
+        .box:hover{
+
+            /* 2nd state   transition property dekho wahi cahnge hogi jo usme pada */
+            /* jo chiz yrainsition property mai hai gar vo bdlegi tabhi tarnistion chaega jese yaha width badli */
+
+            width: 1200px;
+            background-color: aquamarine;
+            height:200px ;
+
+        }
+    </style>
+</head>
+<body>
+      <div class="box">
+
+      </div>
+</body>
+</html>

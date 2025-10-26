@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animations Ka Gyan</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .container {
+            width: 100vw;
+            height: 100vh;
+            background-color: beige;
+            border: 5px solid black;
+            
+        }
+
+        .box {
+            width: 350px;
+            height: 80px;
+            background-color: blue;
+            border-radius: 10px;
+            border: 3px solid yellow;
+            margin: 10px;
+            padding: 5px;
+
+            /* taki box move kar sake nahi to static mai kese move karega */
+            position: relative;
+            /* animation-name: rightMovement; */
+
+            /* source se destination jane ka time kitnalagega */
+            /* animation-duration: 3s; */
+
+            /* kitni baar cahalu animation */
+            /* animation-iteration-count: 2; */
+
+            /* start karne se pehle kitni der ruku */
+            /* animation-delay: 2s; */
+
+            /* abb chlega kitni tez stat tez,slow // end slow ya fast  ye sb hai  google kare iske baare ma pdh lena ya w3 schools se */
+            /* animation-timing-function: linear; */
+            /* animation-timing-function: ease-in; */
+            /* animation-timing-function: ease-out; */
+            /* animation-timing-function: cubic-bezier(0.1,0.7,1,0.1); */
+
+            /* abb element age jaa raha fir restart ho raha hm cahte agge jaye piche aye ese =animation-direction: ka use hota*/
+
+            /* age ajeya wapas ayega alter nate */
+            /* animation-direction:alternate; */
+
+            /* destination se source jaoge */
+            /* animation-direction: reverse; */
+
+            /* destinatination se source baar bar age piche age piche */
+            /* animation-direction: alternate-reverse; */
+
+            /* animation ke start and end mai kya krana cahante ye battata  = animation-fill-mode: ; */
+
+            /* right mai jake ruk jayega last frame mai jake ruk jayega */
+            /* animation-fill-mode:forwards; */
+
+            /* left mai jake ruk jayega jaha se starat hua  */
+            /* animation-fill-mode:backwards; */
+
+            /* animation-fill-mode: forwards; */
+
+
+            /* animation-play-state: rukta isse ye play ; */
+            /* animation-play-state: paused; */
+            /* animation-play-state:running; */
+
+
+
+            /* short hand notation */
+
+            /* animation: name\duration \timing-function delay iteration-count direction fill-mode play-state; */
+
+            animation: rightMovement 4s ease-in-out 0.5s infinite alternate forwards running;
+
+
+
+
+
+        }
+         @keyframes rightMovement {
+
+            /* start begning */
+            from {
+                top: 0;
+                left: 0;
+                background-color: rgb(43, 207, 81);
+            }
+
+            to {
+                top: 0;
+                left: 1200px;
+                background-color: rgb(10, 161, 230);
+
+
+            }
+        }
+
+        #circle {
+            width: 80px;
+            height: 80px;
+            background-color: rgb(255, 0, 81);
+            border-radius: 80px;
+            border: 3px solid rgb(12, 12, 11);
+            margin: 10px;
+            padding: 5px;
+
+            /* taki box move kar sake nahi to static mai kese move karega */
+            position: relative;
+            top: 30%;
+            left: 40%;
+            animation: circleMovement 10s ease-in-out 0s infinite alternate none running;
+
+        }
+        
+        @keyframes circleMovement {
+
+            0% {
+                top: 1%;
+                left: 5%;
+            }
+
+            30% {
+                 top: 5%;
+                left: 90%;
+            }
+
+            60% { top: 70%;
+                left: 10%;
+            }
+
+            100% {
+                 top: 75%;
+                left: 90%;
+            }
+        }
+
+        #box2 {
+            width: 350px;
+            height: 80px;
+            background-color: blue;
+            border-radius: 10px;
+            border: 3px solid yellow;
+            margin: 10px;
+            padding: 5px;
+
+            /* taki box move kar sake nahi to static mai kese move karega */
+            position: relative;
+            animation: leftMovement 4s ease-in-out 0.5s infinite alternate none running;
+
+        }
+
+       
+
+        @keyframes leftMovement {
+
+            /* start begning */
+            from {
+                top: 435px;
+                left: 1200px;
+                background-color: rgb(43, 207, 81);
+            }
+
+            to {
+                top: 435px;
+                left: 0px;
+                background-color: rgb(10, 161, 230);
+
+
+            }
+        }
+
+
+
+        
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="box">
+
+        </div>
+        <div id="circle">
+            hello
+        </div>
+
+        <div id="box2">
+
+        </div>
+
+    </div>
+
+    <!-- /* 🧠 Pehle samjho forwards kya karta hai:
+
+            animation-fill-mode: forwards; ka matlab hota hai —
+
+            Jab animation khatam ho jaaye, tab element apne “to” frame wali final style pe ruk jaaye
+            (wapas original CSS style me na aaye).
+
+            ⚠️ Tumhara shorthand:
+            animation: rightMovement 3s ease-in 0.5s 2 alternate forwards running;
+
+            Problem:
+
+            Tumne animation-iteration-count: 2 aur animation-direction: alternate likha hai.
+
+            Matlab animation:
+
+            Pehli baar → forward (from → to)
+
+            Doosri baar → reverse (to → from)
+
+            Ab dhyaan do ⚡
+
+            👉 Jab animation second time (reverse) me khatam hota hai,
+            uska last frame actually “from” frame hota hai,
+            na ki “to” frame ❗
+
+            Toh forwards use hone par animation “from” position pe ruk jaata hai,
+            isliye lagta hai “forwards chal nahi raha”. */
+         -->
+</body>
+
+</html>

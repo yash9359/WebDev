@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        
+        /* sbke anadar use karne ke liye custom variable ko global bana padega uske liye root ke andar daal do var laga ke use hota variavle */
+
+        :root{
+            --color: beige;
+        }
+
+
+        .container{
+            background-color:var(--color);
+            height: 650px;
+            border: 2px solid red;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+           
+        }
+        .box{
+            /* custom variable */
+            --primary-color :rgb(17, 190, 135);
+
+
+            background-color: var( --primary-color); 
+            width: 330px;
+            height: 330px;
+            border: 2px solid brown;
+            margin: 5px;
+            padding: 5px;
+        
+            /* boxshadow  = x,y,color*/
+            /* box-shadow: -10px 15px brown; */
+
+            /* box shadow using blur radius = x,y,blurradius,color*/
+            /* box-shadow: 10px 15px 50px brown; */
+
+            /* box shadow using blur radius+spreadradius = x,y,blurradius,spread radius,color*/
+            /* box-shadow: 15px 20px 4px 70px rgba(14, 205, 49, 0.7); */
+
+            /* abhi tak spread karyi ab anadar ki rtaraf kar rahe = inset ka use kare */
+            /* box-shadow: inset 10px 15px blueviolet; */
+
+            /* multiple boxshadow */
+            /* box-shadow: 10px 12px red ,15px  15px blue ; */
+
+
+
+           
+        }
+        #head1{
+            /* text shadow */
+
+            /* text-shadow: 12px 13px 2px white; */
+
+            /* text-shadow: yellow 12px 13px 2px; */
+
+            /* text-shadow: white 12px 13px; */
+
+            /* by default shadow ka color wahi color hota hai */
+            /* text-shadow: 12px 13px; */
+
+                /* multiple text shadows */
+            text-shadow: 3px 4px red,5px 6px blueviolet ;
+
+
+
+
+
+
+        }
+    </style>
+</head>
+<body>
+      <div class="container">
+        <div class="box">
+            <img src="reshot-icon-telegram-LSZVDUKX6M.svg" alt="photo">
+            <h2 id="head1">Welcome to CodeHelp</h2>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum nisi iusto illo deserunt sunt nemo a distinctio similique odio ratione consectetur sequi, dolor ipsa. Dolor?
+            </p>
+        </div>
+      </div>
+</body>
+</html>
