@@ -1,0 +1,53 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100%;
+    width: 100%;
+}
+.container{
+    height: 100%;
+    width: 100%;
+    background-color: rgb(59, 56, 56);
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: repeat(4,200px);
+    gap: 0.4rem;
+    padding: 4rem;
+
+    /* sare item mai */
+    /* justify-items: end; */
+
+    /* align-items: start;
+     */
+     /* align-items: end;
+      */
+
+      /* horizontal and vertical dono ke liye */
+      place-items: center;
+
+    
+   
+.item{
+     height:50px;
+     width: 100px; 
+    background-color: rgb(107, 205, 21);
+    border: 5px solid rgb(216, 201, 201);
+    /* grid ka justify bhi same vese hi jese flex ka  prr ye cell ke andar hoga*/
+    /* grid default horizontal hoti hai */
+    /* horizontal axis */
+    /* justify-self: start; */
+
+    /* vertical axis */
+    /* align-self: stretch; */
+
+
+    /* place self dono align and justify dono ka ek sath us karta */
+    /* place-self: center; */
+}
+
+
+

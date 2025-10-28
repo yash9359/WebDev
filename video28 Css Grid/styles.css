@@ -1,0 +1,95 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    width: 100vw;
+}
+
+.container {
+    background-color: rgb(41, 40, 40);
+    height: 100%;
+    width: 100%;
+    
+
+    /* grid chalu */
+    display: grid;
+    
+    padding: 4rem;
+
+
+    /* row-gap: 1rem;
+    column-gap: 1rem; */
+    /* short hand property row and column mai 1 rem de diya */
+    gap: 1rem;
+
+
+    /* rows to dikh rahi hame colmn saty mai lane matalb alag alag karna too uske liye hme row templates and colums templates use karni padegi */
+    /* 100px ke do column */
+    /* grid-template-rows: 1fr 1fr ; */
+    /* repeat(kitni baar, kintne (px,fr etc) */
+    /* aab 3 rows bana di */
+    
+
+
+    grid-template-columns: repeat(1,1fr);
+    grid-template-rows: repeat(6,1fr);
+
+
+
+    /* inline gdrid ke baare mai padhna hai */
+
+
+}
+
+.item {
+    background-color: rgb(71, 71, 198);
+    border: 5px solid black;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+
+}
+
+@media (max-width:768px) {
+   
+   
+    
+}
+
+@media (min-width:768px) {
+
+    .container{
+         grid-template-rows: repeat(4, 1fr);
+
+
+
+    /* grid-template-columns: 1fr 1fr 1fr; */
+    /* same upper wala hii hai */
+    grid-template-columns: repeat(3, 1fr);
+    }
+
+    .header {
+    /* header ko line 1 se line 4 tak extend kar diya hai */
+    grid-column-start: 1;
+    grid-column-end: 4;
+ }
+
+.footer {
+    grid-column-start: 1;
+    grid-column-end: 4;
+}
+.sidebar{
+    grid-row-start: 2;
+    grid-row-end: 4;
+}
+.content1{
+    grid-column-start: 2;
+    grid-column-end: 4;
+}
+}
